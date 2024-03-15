@@ -2,8 +2,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
-      <h2>My Films</h2>
-    </div>
+    <main className="xl:ml-24 flex">
+      <h2 className="">My Films</h2>
+    </main>
   );
 }
+
+// lg:ml-[120px]
