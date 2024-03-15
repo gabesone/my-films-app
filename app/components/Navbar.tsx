@@ -1,17 +1,30 @@
 import React from "react";
 import Image from "next/image";
-import { GoHomeFill } from "react-icons/go";
-import { GoHome } from "react-icons/go";
+import {
+  PiFilmSlateLight,
+  PiTelevisionSimpleLight,
+  PiHouseLight,
+} from "react-icons/pi";
+
+import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {
   return (
     <nav className="fixed shadow-sm h-12 w-full bottom-0 xl:min-h-screen xl:w-24 xl:left-0 bg-black z-50">
-      <div className="w-full h-12 flex justify-between items-center p-4 text-white">
-        <div className="flex flex-row items-center justify-around w-full">
-          <GoHome className="text-4xl" />
-          <h2>icon 2</h2>
-          <h2>icon 3</h2>
-          <h2>icon 4</h2>
+      <div className="w-full h-12 flex justify-between items-center p-4 text-white xl:min-h-screen">
+        <div className="flex flex-row items-center justify-around w-full xl:flex-col xl:justify-start xl:gap-16 xl:py-8 xl:min-h-screen text-4xl">
+          <div>
+            <PiHouseLight />
+          </div>
+          <div>
+            <PiFilmSlateLight />
+          </div>
+          <div>
+            <PiTelevisionSimpleLight />
+          </div>
+          <div>
+            <CiSearch />
+          </div>
         </div>
       </div>
     </nav>
