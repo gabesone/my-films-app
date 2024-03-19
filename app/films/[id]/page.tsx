@@ -1,7 +1,11 @@
 import React from "react";
 
-const page = (id: string) => {
-  return <div>page</div>;
-};
-
-export default page;
+export default function Page({
+  params,
+  searchParams,
+}: {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  return <h1>My Page</h1>;
+}
