@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 
-const test = () => {
+// 1011985
+
+const Test = () => {
   const [data, setData] = useState("");
 
   return (
@@ -14,4 +16,4 @@ const test = () => {
   );
 };
 
-export default test;
+export default Test;
