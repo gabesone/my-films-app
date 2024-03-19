@@ -37,16 +37,16 @@ const Hero = async () => {
       </div>
       <div className="w-full flex justify-end">
         {
-          <Suspense fallback={<Loading />}>
-            <Image
-              src={`https://image.tmdb.org/t/p/original/${randomMovieBackdrop.backdrop_path}`}
-              alt={randomMovieBackdrop.title}
-              priority
-              width={1280}
-              height={720}
-              className="object-contain w-auto h-auto"
-            />
-          </Suspense>
+          // <Suspense fallback={<Loading />}>
+          <Image
+            src={`https://image.tmdb.org/t/p/original/${randomMovieBackdrop.backdrop_path}`}
+            alt={randomMovieBackdrop.title}
+            priority
+            width={1280}
+            height={720}
+            className="object-contain w-auto h-auto"
+          />
+          // </Suspense>
         }
       </div>
       {/* Watch Trailer Button*/}
