@@ -1,11 +1,5 @@
 import React from "react";
 
-export default function Page({
-  params,
-  searchParams,
-}: {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
+export default function Page({ params }: { params: { id: string } }) {
   return <h1>My Page</h1>;
 }
