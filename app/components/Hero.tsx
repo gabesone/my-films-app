@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { getTrendings } from "../api/fetchFunctions";
 import Image from "next/image";
 import { MovieProps } from "../types";
@@ -6,6 +6,7 @@ import Rating from "./Rating";
 import { IoMdPlay } from "react-icons/io";
 import { MdOutlinePlayCircle } from "react-icons/md";
 import { PiPlayCircleLight } from "react-icons/pi";
+import Loading from "../loading";
 
 const getPopularMovies = async () => {
   const popularMovies = await getTrendings();
@@ -35,14 +36,18 @@ const Hero = async () => {
         </div>
       </div>
       <div className="w-full flex justify-end">
-        <Image
-          src={`https://image.tmdb.org/t/p/original/${randomMovieBackdrop.backdrop_path}`}
-          alt={randomMovieBackdrop.title}
-          priority
-          width={1280}
-          height={720}
-          className="object-contain w-auto h-auto"
-        />
+        {
+          <Suspense fallback={<Loading />}>
+            <Image
+              src={`https://image.tmdb.org/t/p/original/${randomMovieBackdrop.backdrop_path}`}
+              alt={randomMovieBackdrop.title}
+              priority
+              width={1280}
+              height={720}
+              className="object-contain w-auto h-auto"
+            />
+          </Suspense>
+        }
       </div>
       {/* Watch Trailer Button*/}
       <div>
