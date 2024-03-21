@@ -1,11 +1,8 @@
-import React from "react";
-import Image from "next/image";
 import {
   PiFilmSlateLight,
   PiTelevisionSimpleLight,
   PiHouseLight,
 } from "react-icons/pi";
-
 import { CiSearch } from "react-icons/ci";
 
 const Navbar = () => {

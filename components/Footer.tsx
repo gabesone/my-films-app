@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import TMDB from "@/public/tmdb-logo.svg";
-
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io";
 // import GitHubIcon from "@mui/icons-material/GitHub";
 // import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="xl:ml-24 my-16 bg-[#1A1C20] relative bottom-0">
+    <footer className="xl:ml-24 px-4 py-8 max-xl:mb-12 relative bottom-0 border-t border-gray-700">
       <div className="">
         <p className="text-gray-500/80">
           Data provided by{" "}
@@ -34,15 +34,22 @@ const Footer = () => {
         </p>
       </div>
 
-      <div>
-        <Link href="https://github.com/gabesone">
-          {/* <GitHubIcon /> */}
-          GitHub
-        </Link>
-        <Link href="https://www.linkedin.com/in/gabrielgsena/">
-          {/* <LinkedInIcon /> */}
-          LinkedIn
-        </Link>
+      <div className="text-gray-500/80 w-fit gap-4 mt-2 flex text-3xl">
+        <div>
+          <Link href="https://github.com/gabesone" target="_blank">
+            {/* <GitHubIcon /> */}
+            <IoLogoGithub className="hover:text-gray-300 transition duration-300" />
+          </Link>
+        </div>
+        <div>
+          <Link
+            href="https://www.linkedin.com/in/gabrielgsena/"
+            target="_blank"
+          >
+            {/* <LinkedInIcon /> */}
+            <IoLogoLinkedin className="hover:text-gray-300 transition duration-300" />
+          </Link>
+        </div>
       </div>
     </footer>
   );
