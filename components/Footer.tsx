@@ -8,7 +8,10 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="xl:ml-24 px-4 py-8 max-xl:mb-12 relative bottom-0 border-t border-gray-700">
+    <footer
+      className="xl:ml-24 px-4 py-8 max-xl:mb-12
+     relative bottom-0 border-t border-gray-700"
+    >
       <div className="">
         <p className="text-gray-500/80">
           Data provided by{" "}

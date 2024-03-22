@@ -34,9 +34,9 @@ const Hero = async () => {
 
   return (
     <div className="relative flex max-h-[720px]">
-      <div className="flex absolute h-[50%] xl:h-full xl:w-[65%] w-full bottom-0 xl:bg-gradient-to-r bg-gradient-to-t from-black via-current to-transparent z-10 justify-start max-xl:items-end pt-4">
+      <div className="flex absolute h-[50%] xl:h-full xl:w-[65%] w-full bottom-0 xl:bg-gradient-to-r bg-gradient-to-t from-black via-current to-transparent z-10 justify-start max-xl:items-end">
         {/* Movie or TV show details */}
-        <div className="text-white flex flex-col px-4 xl:px-8 py-4 xl:py-32 space-y-2 items-baseline xl:w-[65%] xl:space-y-8">
+        <div className="text-white h-full justify-end xl:justify-center flex flex-col px-4 xl:px-8 py-4 xl:py-32 space-y-2 items-baseline xl:w-[65%] xl:space-y-8">
           <Link href={`/films/${id}`}>
             <h2 className="text-2xl xl:text-4xl">{title}</h2>
           </Link>
@@ -65,14 +65,14 @@ const Hero = async () => {
           />
           // </Suspense>
         }
+        <div>
+          <PiPlayCircleLight
+            className="flex absolute left-[40%] sm:left-[45%] top-[10%] text-gray-200 lg:hidden cursor-pointer"
+            size={72}
+          />
+        </div>
       </div>
       {/* Watch Trailer Button*/}
-      <div>
-        <PiPlayCircleLight
-          className="flex absolute left-[40%] sm:left-[45%] top-[10%] text-gray-200 lg:hidden cursor-pointer"
-          size={72}
-        />
-      </div>
     </div>
   );
 };
